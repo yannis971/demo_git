@@ -1,0 +1,32 @@
+body {
+    background-color: #FFFFFF;
+}
+.wrapper {
+    width: 256px;
+    margin: 0 auto;
+}
+#slider {
+    width: 256px;
+    height: 256px;
+    overflow: hidden;
+    margin: 80px auto;
+}
+#slider>img {
+    width: 256px;
+    height: 256px;
+    float: left;
+    display: none;
+}
+a {
+    padding: 5px;  
+    background-color: #F0F0F0;
+    margin-top: 5px;
+    text-decoration: none;
+    color: #666;
+}
+a.left {
+    float: left;
+}
+a.right {
+    float: right;
+}
