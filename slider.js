@@ -50,4 +50,14 @@ function stopLoop() {
     window.clearInterval(loop);
 }
 
+$("#slider>img").hover(
+    function() { 
+        stopLoop(); 
+    } ,
+    function() { 
+        startDiaporama(); 
+    }
+);
+
+
 
