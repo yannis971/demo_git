@@ -22,4 +22,32 @@ function startDiaporama() {
     },3000)
 }
 
+function prev() {
+    sliderNew = sliderCurrent - 1;
+    showDiapo(sliderNew);
+}
+
+function next() {
+    sliderNew = sliderCurrent + 1;
+    showDiapo(sliderNew);
+}
+
+function showDiapo(id) {
+    stopLoop();
+    if (id > count) {
+        id = 1;
+    } else if (id < 1) {
+        id = count;
+    }  
+    $("#slider>img").fadeOut(300);
+    $("#slider>img#"+id).fadeIn(300);
+    sliderCurrent = id;
+    sliderNext = id + 1;
+    startDiaporama();
+}
+
+function stopLoop() {
+    window.clearInterval(loop);
+}
+
 
