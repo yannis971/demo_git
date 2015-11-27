@@ -1,6 +1,7 @@
 sliderCurrent = 1;
 sliderNext = 2;
 count = 0;
+$('#play').hide();
 
 $(document).ready(function(){
     count = $("#slider>img").size();
@@ -52,12 +53,35 @@ function stopLoop() {
 
 $("#slider>img").hover(
     function() { 
-        stopLoop(); 
+        stopLoop();
+        showPlay(); 
     } ,
     function() { 
         startDiaporama(); 
+        showPause();
     }
 );
+
+$('#stop').click( function() {
+	stopLoop();
+	showPlay();
+});
+
+$('#play').click( function() {
+	startDiaporama();
+	showPause();
+});
+
+function showPause() {
+	$('#play').hide();
+	$('#stop').show();
+}
+
+function showPlay() {
+	$('#stop').hide();
+	$('#play').show();
+}
+
 
 
 
